@@ -13,4 +13,5 @@ key = os.environ.get('GIPHY_KEY')
 url = (f"https://api.giphy.com/v1/gifs/search?api_key={key}&q=pikachu&rating=g")
 giphy_res = requests.get(url)
 body = json.loads(giphy_res.content)
-print(body['data'][0]['url'])
+giph_url = body['data'][0]['url']
+print(giph_url)
